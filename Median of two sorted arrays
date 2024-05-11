@@ -1,0 +1,25 @@
+class Solution {
+public:
+
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        vector<int>mv;
+        mv.insert(mv.end(),nums1.begin(),nums1.end());
+        mv.insert(mv.end(),nums2.begin(),nums2.end());
+        // merge the 2 vectors 
+        //sort
+        sort(mv.begin(), mv.end());
+        int n = mv.size();
+  if (n % 2 == 0) {
+    // Even length, median is average of middle two elements
+    return (double)(mv[n / 2 - 1] + mv[n / 2]) / 2.0;
+  } else {
+    // Odd length, median is the middle element
+    return (double)mv[n / 2];
+  }
+        
+    }
+//mergearr(nums1,nums2);
+//findMedianSortedArrays(nums1,nums2);
+    
+
+};

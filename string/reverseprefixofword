@@ -1,0 +1,44 @@
+/*
+
+// two pointer approch 
+
+class Solution {
+public:
+
+    string reversePrefix(string word, char ch) {
+        int j=word.find(ch);
+        int i=0;
+        while(i<j){
+            swap(word[i], word[j]);
+            i++;
+            j--;
+
+        }
+        return word;
+}
+};
+
+
+
+
+
+//  using stl 
+
+class Solution {
+public:
+
+    string reversePrefix(string word, char ch) {
+        // Find the first occurrence of ch in word
+        int index = word.find(ch);
+        
+        // If ch is found (index >= 0), reverse the substring from 0 to index (inclusive)
+        if (index >= 0) {
+            reverse(word.begin(), word.begin() + index + 1);
+        }
+        
+        // Return the modified word
+        return word;
+    }
+};
+*/
+

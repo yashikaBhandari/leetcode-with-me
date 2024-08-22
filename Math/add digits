@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
 int sum(int num){
     int sum=0;
@@ -19,3 +19,4 @@ int sum(int num){
         return num;
     }
 };
+*/

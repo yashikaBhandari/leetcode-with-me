@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
     private:
     void solve(vector<int> nums,vector<int>output,int index,vector<vector<int>>&ans){
         //base 
@@ -23,4 +23,5 @@ public:
         solve(nums,output,index,ans);
         return ans;
     }
-};
+};*/
+

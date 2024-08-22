@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
     bool checkIfPangram(string sentence) {
         vector<bool> alpha(26,0);
@@ -14,3 +14,5 @@ public:
         return 1;
     }
 };
+
+*/

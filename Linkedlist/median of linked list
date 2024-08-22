@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
 int size(ListNode* head){
     int n=0;
@@ -21,4 +21,4 @@ int size(ListNode* head){
         return head;
     }
 
-};
+};*/

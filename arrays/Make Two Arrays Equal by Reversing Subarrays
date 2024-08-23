@@ -1,0 +1,49 @@
+// Approach1
+
+/*class Solution {
+public:
+    bool canBeEqual(vector<int>& target, vector<int>& arr) {
+        // sort and compare elements of target and arr 
+
+        int n=target.size();
+        sort(target.begin(),target.end());
+        sort(arr.begin(),arr.end());
+        for(int i=0;i<n;i++){
+            if(target[i]!=arr[i])
+            return false;
+        }
+        return true;
+    }
+};*/
+
+
+// Approch2 
+
+// using unordered map
+
+class Solution {
+public:
+    bool canBeEqual(vector<int>& target, vector<int>& arr) {
+        unordered_map<int,int> mp;
+        for(int &num:target){
+            mp[num]++;
+
+        }
+
+        for(int &num : arr){
+          if(mp.find(num)== mp.end()){
+            // means num is not found in map 
+            return false;
+          }
+          mp[num]--;
+          if(mp[num]==0){
+            mp.erase(num);
+          }
+
+        }
+        return mp.size()==0;
+
+
+    }
+    
+};

@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int,int>umap;
@@ -23,4 +23,4 @@ public:
         return ans;
     }
     
-};
+};*/

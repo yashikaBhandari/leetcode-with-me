@@ -1,0 +1,25 @@
+/*class Solution {
+public:
+    int alternateDigitSum(int n) {
+        string num = to_string(n);
+        int sum=0;
+        for(int i=0;i<num.length();i++){
+            int digit=num[i]-'0';
+            if(i%2==0){
+                sum+=digit;
+            }
+            else{
+                sum-=digit;
+            }
+
+        }
+        return sum;
+    }
+};*/
+/*
+// The expression int digit = num[i] - '0'; is used to convert a character representing a digit into its corresponding integer value.
+
+If num[i] is '5' (ASCII value 53), then '5' - '0' is 53 - 48, which equals 5.
+If num[i] is '2' (ASCII value 50), then '2' - '0' is 50 - 48, which equals 2.
+
+*/

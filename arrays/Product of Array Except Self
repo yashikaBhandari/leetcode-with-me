@@ -1,7 +1,7 @@
 // time complexity : O(n)
 // s.c : O(1)
 
-class Solution {
+/*class Solution {
 public:
 
     vector<int> productExceptSelf(vector<int>& nums) {
@@ -19,3 +19,4 @@ public:
         return result;
     }
 };
+*/

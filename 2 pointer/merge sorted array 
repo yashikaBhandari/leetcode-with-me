@@ -1,0 +1,81 @@
+/* 2 pointer approch 
+
+vector<int> mergeSortedArrays(const vector<int>& arr1, const vector<int>& arr2) {
+    vector<int> merged;
+    int i = 0, j = 0;
+
+    // Merge arrays while there are elements in both
+    while (i < arr1.size() && j < arr2.size()) {
+        if (arr1[i] < arr2[j]) {
+            merged.push_back(arr1[i]);
+            i++;
+        } else {
+            merged.push_back(arr2[j]);
+            j++;
+        }
+    }
+
+    // If there are remaining elements in arr1
+    while (i < arr1.size()) {
+        merged.push_back(arr1[i]);
+        i++;
+    }
+
+    // If there are remaining elements in arr2
+    while (j < arr2.size()) {
+        merged.push_back(arr2[j]);
+        j++;
+    }
+
+    return merged;
+}
+__________________________________________________________________________________
+
+// using merge 
+
+// efficient approch 
+
+     /*void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        // Create a temporary vector to hold the merged result
+        vector<int> temp(m + n);
+        
+        // Use std::merge to merge nums1 and nums2 into temp
+        std::merge(nums1.begin(), nums1.begin() + m, nums2.begin(), nums2.begin() + n, temp.begin());
+        
+        // Copy the merged result back into nums1
+        nums1 = temp;
+    }
+    // temp is used as this temporary container.
+    // to avoid using extra space
+    // Copy Back to nums1: To ensure nums1 contains the merged result.
+};*/
+
+
+
+
+
+// merge in STL requires a extra container to store its result 
+// merge only takes sorted inputs 
+
+/*If you have unsorted arrays, you need to sort them first before merging. Here’s a step-by-step approach to handle this scenario:
+
+Sort Both Arrays: Use std::sort to sort both arrays before merging.
+Merge the Sorted Arrays: Use std::merge to combine the sorted arrays into one sorted array.
+
+void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        // Sort the input arrays
+        sort(nums1.begin(), nums1.begin() + m);
+        sort(nums2.begin(), nums2.begin() + n);
+
+        // Create a temporary vector to hold the merged result
+        vector<int> temp(m + n);
+
+        // Use std::merge to merge sorted nums1 and nums2 into temp
+        std::merge(nums1.begin(), nums1.begin() + m, nums2.begin(), nums2.begin() + n, temp.begin());
+
+        // Copy the merged result back into nums1
+        nums1 = temp;
+    }
+
+
+*/
